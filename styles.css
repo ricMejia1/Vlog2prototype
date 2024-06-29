@@ -12,36 +12,11 @@ header {
 }
 
 main {
-    display: flex;
-}
-
-aside {
-    width: 200px;
-    background-color: #f9f9f9;
     padding: 20px;
-}
-
-aside h2 {
-    margin-top: 0;
-}
-
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin: 10px 0;
-}
-
-aside ul li a {
-    text-decoration: none;
-    color: black;
 }
 
 section {
-    flex: 1;
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 form {
