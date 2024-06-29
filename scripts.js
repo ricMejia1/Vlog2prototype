@@ -1,3 +1,12 @@
+// Dictionary for class colors
+const classColors = {
+    'Math': '#FFD700',
+    'Science': '#ADFF2F',
+    'History': '#00CED1',
+    'English': '#FF69B4',
+    // Add more classes and colors as needed
+};
+
 // Load entries from localStorage
 function loadEntries() {
     const entries = JSON.parse(localStorage.getItem('entries')) || [];
@@ -15,6 +24,9 @@ function saveEntries(entries) {
 function addEntryToDOM(entry) {
     const entryDiv = document.createElement('div');
     entryDiv.classList.add('entry');
+
+    // Get color for class name
+    const classColor = classColors[entry.className] || '#FFFFFF'; // Default to white if not found
     
     // Create document and video file URLs if available
     const docUrl = entry.docUrl ? entry.docUrl : '';
@@ -22,7 +34,7 @@ function addEntryToDOM(entry) {
 
     // Add content to entry
     entryDiv.innerHTML = `
-        <h3>${entry.className} - ${entry.date}</h3>
+        <h3 style="color: ${classColor}">${entry.className} - ${entry.date}</h3>
         <p>${entry.notes}</p>
         ${entry.docUrl ? `<p>Document: <a href="${docUrl}" target="_blank">${entry.docName}</a></p>` : ''}
         ${entry.videoUrl ? `<p>Video: <a href="${videoUrl}" target="_blank">${entry.videoName}</a></p>` : ''}
