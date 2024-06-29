@@ -11,47 +11,35 @@
         <h1>Academic Journal</h1>
     </header>
     <main>
-        <aside id="class-list">
-            <h2>Classes</h2>
-            <ul>
-                <li><a href="#" data-class="Math">Math</a></li>
-                <li><a href="#" data-class="Science">Science</a></li>
-                <li><a href="#" data-class="History">History</a></li>
-                <li><a href="#" data-class="English">English</a></li>
-                <!-- Add more classes as needed -->
-            </ul>
-        </aside>
-        <section>
-            <form id="log-form">
-                <label for="date">Date:</label>
-                <input type="date" id="date" required>
-                
-                <label for="class-name">Class Name:</label>
-                <select id="class-name" required>
-                    <option value="Math">Math</option>
-                    <option value="Science">Science</option>
-                    <option value="History">History</option>
-                    <option value="English">English</option>
-                    <!-- Add more classes as needed -->
-                </select>
-                
-                <label for="notes">Notes:</label>
-                <textarea id="notes" required></textarea>
-                
-                <label for="upload-doc">Upload Document:</label>
-                <input type="file" id="upload-doc" accept=".pdf,.doc,.docx">
-                
-                <label for="upload-video">Upload Video:</label>
-                <input type="file" id="upload-video" accept="video/*">
-                
-                <button type="submit">Post</button>
-            </form>
+        <form id="log-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
             
-            <div id="entries">
-                <h2>Posts:</h2>
-                <!-- Entries will be appended here -->
-            </div>
-        </section>
+            <label for="class-name">Class Name:</label>
+            <select id="class-name" required>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="English">English</option>
+                <!-- Add more classes as needed -->
+            </select>
+            
+            <label for="notes">Notes:</label>
+            <textarea id="notes" required></textarea>
+            
+            <label for="upload-doc">Upload Document:</label>
+            <input type="file" id="upload-doc" accept=".pdf,.doc,.docx">
+            
+            <label for="upload-video">Upload Video:</label>
+            <input type="file" id="upload-video" accept="video/*">
+            
+            <button type="submit">Post</button>
+        </form>
+        
+        <div id="entries">
+            <h2>Posts:</h2>
+            <!-- Entries will be appended here -->
+        </div>
     </main>
     <script src="scripts.js"></script>
 </body>
