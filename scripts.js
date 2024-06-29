@@ -1,9 +1,7 @@
 // Dictionary for class colors
 const classColors = {
-    'Math': '#FFD700',
-    'Science': '#ADFF2F',
-    'History': '#00CED1',
-    'English': '#FF69B4',
+    'Calculus': '#ff0000',
+    'Physics': '#0000ff'
     // Add more classes and colors as needed
 };
 
