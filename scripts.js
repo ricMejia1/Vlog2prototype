@@ -24,7 +24,6 @@ function saveEntries(entries) {
 function addEntryToDOM(entry) {
     const entryDiv = document.createElement('div');
     entryDiv.classList.add('entry');
-    entryDiv.dataset.class = entry.className;  // Add class name as data attribute
 
     // Get color for class name
     const classColor = classColors[entry.className] || '#FFFFFF'; // Default to white if not found
@@ -100,26 +99,6 @@ document.getElementById('log-form').addEventListener('submit', function(event) {
     // Clear form fields
     document.getElementById('log-form').reset();
 });
-
-// Filter entries by class
-document.querySelectorAll('#class-list a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const className = this.dataset.class;
-        filterEntriesByClass(className);
-    });
-});
-
-function filterEntriesByClass(className) {
-    const entries = document.querySelectorAll('.entry');
-    entries.forEach(entry => {
-        if (entry.dataset.class === className || className === 'all') {
-            entry.style.display = 'block';
-        } else {
-            entry.style.display = 'none';
-        }
-    });
-}
 
 // Initial load of entries
 loadEntries();
