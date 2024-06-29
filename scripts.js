@@ -22,7 +22,13 @@ document.getElementById('log-form').addEventListener('submit', function(event) {
         <p>${notes}</p>
         ${docFile ? `<p>Document: <a href="${docUrl}" target="_blank">${docFile.name}</a></p>` : ''}
         ${videoFile ? `<p>Video: <a href="${videoUrl}" target="_blank">${videoFile.name}</a></p>` : ''}
+        <button class="delete-btn">Delete Entry</button>
     `;
+
+    // Add event listener for delete button
+    entryDiv.querySelector('.delete-btn').addEventListener('click', function() {
+        entryDiv.remove();
+    });
 
     // Add entry to entries section
     document.getElementById('entries').appendChild(entryDiv);
